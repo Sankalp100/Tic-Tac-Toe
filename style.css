@@ -1,0 +1,13 @@
+td {
+    border: 2px solid rgb(51, 51, 51);
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 70px;
+    cursor: pointer;
+}
+table{
+    border-collapse: collapse;
+}
