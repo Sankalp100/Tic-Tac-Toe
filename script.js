@@ -41,10 +41,10 @@ function checkWin(board, player){
      (e === player) ? a.concat(i) : a, []);
     let gameWon = null;
     for(let [index, win] of winCombos.entries()){
-        if(win.every(elem => plays.indexOf(elem > -1)){
+        if(win.every(elem => plays.indexOf(elem) > -1)){
             gameWon = {index: index, player: player};
             break;
-        })
+        }
     }
     return gameWon;
 }
@@ -52,7 +52,10 @@ function checkWin(board, player){
 function gameOver(gameWon){
     for(let index of winCombos[gameWon.index]){
         document.getElementById(index).style.backgroundColor=
-            gameWon.player == huPlayer ? "blue" : "red";
+            gameWon.player == huPlayer ? "green" : "red";
+    }
+    for(var i=0; i < cells.length; i++){
+        cells[i].removeEventListener('click', turnClick, false);
     }
 }
 
